@@ -1,0 +1,156 @@
+{
+  "documentType": "ui-redesign-brief",
+  "version": 1,
+  "product": {
+    "name": "ECMS Pro",
+    "description": "Admin web app for managing an English language center",
+    "locale": "vi-VN",
+    "platform": "desktop-first responsive web",
+    "source": "PJ/FE/Admin"
+  },
+  "redesignGoal": "Redesign the existing admin interface while preserving its current modules, data, navigation, and workflows. Return a coherent visual system and screen concepts that can be implemented in the existing React app.",
+  "constraints": [
+    "Keep all user-facing content in Vietnamese.",
+    "Do not remove or invent business capabilities; visual changes should preserve the described interactions.",
+    "Support desktop, tablet, and mobile widths.",
+    "Use clear loading, empty, success, and error states for data-driven screens.",
+    "The current app is a local development/demo UI and does not have a complete authentication flow."
+  ],
+  "designSystemCurrent": {
+    "fonts": ["DM Sans", "Plus Jakarta Sans"],
+    "colors": {
+      "ink": "#171b2d",
+      "muted": "#777d91",
+      "primary": "#173ec4",
+      "primaryDark": "#102e9f",
+      "pageBackground": "#f7f7fc",
+      "surface": "#ffffff",
+      "line": "#e8eaf4",
+      "lavender": "#f0f2ff",
+      "success": "#087746",
+      "danger": "#b42318"
+    },
+    "visualStyle": ["light admin dashboard", "blue accent", "rounded cards", "thin borders", "Lucide outline icons"],
+    "layout": {
+      "sidebarWidthPx": 254,
+      "topbarHeightPx": 68,
+      "sidebarPosition": "fixed left",
+      "contentPattern": "sticky top bar with scrollable page content"
+    }
+  },
+  "navigation": [
+    {
+      "group": "Tổng quan",
+      "items": [{ "label": "Dashboard & Báo cáo", "icon": "LayoutDashboard", "screen": "dashboard" }]
+    },
+    {
+      "group": "Quản trị viên",
+      "items": [{ "label": "Tài khoản & Phân quyền", "icon": "Shield", "screen": "accounts" }]
+    },
+    {
+      "group": "Nhân viên vận hành",
+      "items": [
+        { "label": "Giáo viên", "icon": "GraduationCap", "screen": "teachers" },
+        { "label": "Học viên", "icon": "UserRound", "screen": "students" },
+        { "type": "separator" },
+        { "label": "Quản lý Lớp học", "icon": "CalendarDays", "screen": "classes" },
+        { "label": "Quản lý Phòng học", "icon": "Building2", "screen": "rooms" },
+        { "label": "Đăng ký & Xếp lớp", "icon": "BadgeCheck", "screen": "registration" },
+        { "type": "separator" },
+        { "label": "Quản lý Khóa học", "icon": "BookOpen", "screen": "courses" },
+        { "label": "Quản lý giao dịch", "icon": "CreditCard", "screen": "transactions" }
+      ]
+    },
+    {
+      "group": "Hệ thống",
+      "items": [{ "label": "Cài đặt hệ thống", "icon": "Settings", "screen": "settings" }]
+    }
+  ],
+  "globalShell": {
+    "sidebar": ["ECMS Pro brand", "grouped navigation", "current-term status card"],
+    "topbar": ["global search", "branch selector", "administrator profile"],
+    "responsiveBehavior": "Collapse or replace the sidebar with a compact navigation pattern on narrow screens; keep all sections accessible."
+  },
+  "screens": [
+    {
+      "id": "accounts",
+      "title": "Tài khoản & Phân quyền",
+      "purpose": "Manage application accounts and role access.",
+      "content": ["account list", "search", "role and status filters", "account detail panel", "create and edit form"],
+      "roles": ["admin", "nhan_vien", "giao_vien", "hoc_vien"],
+      "actions": ["create account", "edit account", "lock account", "inspect role and account metadata"]
+    },
+    {
+      "id": "teachers",
+      "title": "Giáo viên",
+      "purpose": "Manage teacher profiles and assigned classes.",
+      "content": ["teacher directory", "search and status filter", "teacher profile details", "assigned class list"],
+      "actions": ["create teacher", "edit teacher", "delete teacher", "view assigned classes"]
+    },
+    {
+      "id": "students",
+      "title": "Học viên",
+      "purpose": "Manage student profiles and view their learning and payment records.",
+      "content": ["student directory", "search and status filter", "student profile", "learning history tab", "payment history tab"],
+      "studentStatuses": ["tiềm năng", "đang học", "tạm nghỉ", "hoàn thành", "đã nghỉ"],
+      "actions": ["create student", "edit student", "mark student as left", "view learning history", "view payment history"]
+    },
+    {
+      "id": "courses",
+      "title": "Quản lý Khóa học",
+      "purpose": "Maintain courses offered by the center for enrollment and sales.",
+      "content": ["course summary metrics", "search and status filter", "course catalog table", "course detail panel"],
+      "fields": ["course name and code", "category such as IELTS, TOEIC, or communication", "level", "duration", "tuition", "status", "description"],
+      "actions": ["create course", "edit course", "delete course", "inspect course details"]
+    },
+    {
+      "id": "classes",
+      "title": "Quản lý Lớp học",
+      "purpose": "Manage concrete class schedules, teachers, rooms, enrollment capacity, and waitlists.",
+      "content": ["class list", "waitlist tab", "teacher class-request review tab", "class summary metrics", "class detail panel"],
+      "actions": ["create class", "edit schedule and room", "assign teacher", "inspect capacity", "review waitlist", "approve or reject teacher requests"]
+    },
+    {
+      "id": "rooms",
+      "title": "Quản lý Phòng học",
+      "purpose": "Manage classrooms and their availability.",
+      "content": ["room list", "room status and capacity", "room detail panel"],
+      "actions": ["create room", "edit room", "delete room", "check room availability"]
+    },
+    {
+      "id": "registration",
+      "title": "Đăng ký & Xếp lớp",
+      "purpose": "Enroll students into classes and process class changes or preservation requests.",
+      "content": ["student selector", "available class selector", "schedule and capacity summary", "registration list", "waitlist information"],
+      "actions": ["register student", "check class capacity", "check schedule conflicts", "request class adjustment"]
+    },
+    {
+      "id": "transactions",
+      "title": "Quản lý giao dịch",
+      "purpose": "Review student-submitted course enrollment/payment requests, record a counter transaction, and inspect invoices.",
+      "content": ["open course, available class, student, and transaction summary cards", "pending enrollment/payment request queue", "counter transaction form", "selected student's invoice history"],
+      "actions": ["refresh request queue", "confirm a pending request", "reject a pending request", "record counter transaction", "select student and inspect invoice history"],
+      "requestStatuses": ["cho_xac_nhan", "da_xac_nhan", "tu_choi"],
+      "notes": ["Student requests are not enrolled or invoiced until staff confirms them.", "Payment integration is currently a demo and does not connect to a real payment gateway."]
+    }
+  ],
+  "sharedComponents": [
+    "sidebar navigation item with active state",
+    "breadcrumb and page heading",
+    "metric card with icon",
+    "search and filter bar",
+    "data table with empty and loading states",
+    "status pill",
+    "detail side panel",
+    "create/edit modal or form",
+    "success and error alert",
+    "confirmation dialog for destructive actions"
+  ],
+  "redesignDeliverablesRequestedFromAI": [
+    "Propose an updated visual direction and design tokens.",
+    "Redesign the admin shell and representative screens: students, classes, courses, and transactions.",
+    "Include desktop and mobile responsive behavior.",
+    "Keep Vietnamese labels and preserve the listed workflows.",
+    "Return implementation-ready component descriptions or React-compatible HTML/CSS guidance."
+  ]
+}

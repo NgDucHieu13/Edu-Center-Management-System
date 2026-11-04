@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Build output and local caches
+dist/
+build/
+web-build/
+.expo/
+.vite/
+coverage/
+
+# Logs and editor/OS files
+*.log
+.DS_Store
+Thumbs.db
+*.vpp.bak_*

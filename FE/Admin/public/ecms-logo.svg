@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Digital School</title>
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a6cf25"/><stop offset="1" stop-color="#6dbd31"/></linearGradient>
+    <linearGradient id="stand" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#078d52"/><stop offset="1" stop-color="#00a65a"/></linearGradient>
+  </defs>
+  <!-- Monitor frame -->
+  <path d="M20 42Q20 35 28 35h72q8 0 8 8v43q0 8-8 8H28q-8 0-8-8z" fill="none" stroke="url(#stand)" stroke-width="5"/>
+  <!-- Open book -->
+  <path d="M29 42h31q6 0 8 4v39q-3-4-9-4H29z" fill="#fff" stroke="url(#screen)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M99 42H68q-6 0-8 4v39q3-4 9-4h30z" fill="#fff" stroke="url(#screen)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M64 46v38" stroke="#86c735" stroke-width="2"/>
+  <!-- Monitor stand -->
+  <path d="M57 94h14v10h14l5 5H38l5-5h14z" fill="url(#stand)"/>
+  <!-- Colorful learning letters -->
+  <g font-family="Arial,sans-serif" font-weight="800" text-anchor="middle">
+    <text x="42" y="32" font-size="17" fill="#e74835" transform="rotate(18 42 32)">A</text>
+    <text x="59" y="24" font-size="18" fill="#f2a51c" transform="rotate(-10 59 24)">B</text>
+    <text x="77" y="31" font-size="16" fill="#169b78" transform="rotate(17 77 31)">C</text>
+    <text x="91" y="22" font-size="17" fill="#e5a51b" transform="rotate(-13 91 22)">D</text>
+    <text x="53" y="43" font-size="15" fill="#258ecb" transform="rotate(-35 53 43)">E</text>
+    <text x="76" y="44" font-size="14" fill="#cf3e91" transform="rotate(36 76 44)">F</text>
+    <text x="91" y="39" font-size="13" fill="#e44b36" transform="rotate(-32 91 39)">G</text>
+    <text x="66" y="17" font-size="14" fill="#258ecb" transform="rotate(28 66 17)">+</text>
+  </g>
+</svg>

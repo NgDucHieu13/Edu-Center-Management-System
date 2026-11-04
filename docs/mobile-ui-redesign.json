@@ -1,0 +1,172 @@
+{
+  "documentType": "ui-redesign-brief",
+  "version": 1,
+  "product": {
+    "name": "ECMS Mobile",
+    "description": "Mobile app for English-center students and teachers",
+    "locale": "vi-VN",
+    "platform": "Expo / React Native, also previewed on web",
+    "source": "PJ/FE/Mobile"
+  },
+  "redesignGoal": "Redesign the existing mobile app for clear, touch-friendly student and teacher workflows while preserving current features, API behavior, and demo-mode profile selection.",
+  "constraints": [
+    "Keep all user-facing content in Vietnamese.",
+    "Design mobile-first for narrow phone screens, with a usable tablet and web preview layout.",
+    "Preserve both Student and Teacher modes and the ability to switch between them.",
+    "There is currently no login flow. Users choose a sample student or teacher profile for local testing.",
+    "Show clear loading, empty, error, success, and pending-approval states.",
+    "Do not imply that real money is charged: payment is a demo and staff confirmation is required."
+  ],
+  "designSystemCurrent": {
+    "fonts": ["Plus Jakarta Sans", "DM Sans", "system sans-serif"],
+    "colors": {
+      "ink": "#18213b",
+      "muted": "#77819a",
+      "primary": "#3157d5",
+      "primaryTint": "#eef2ff",
+      "line": "#e8ecf5",
+      "success": "#16815c",
+      "pageBackground": "#f6f8fc",
+      "surface": "#ffffff",
+      "warning": "#94620c",
+      "error": "#a3342c"
+    },
+    "visualStyle": ["light education app", "blue primary actions", "rounded cards", "compact bottom tab bar", "clear status chips"],
+    "interaction": ["large touch targets", "short forms", "bottom sheets or dialogs for focused tasks", "pull to refresh"]
+  },
+  "globalShell": {
+    "header": ["ECMS Mobile brand", "current mode switch", "refresh action"],
+    "content": ["API connection error panel when requests fail", "scrollable screen content", "success and error feedback"],
+    "navigation": "Fixed bottom tab bar; show five mode-specific tabs and a clear active state.",
+    "demoProfileSelection": "Student mode selects a student profile in the Personal tab. Teacher mode selects a teacher profile near the top of the teacher workspace."
+  },
+  "modes": [
+    {
+      "id": "student",
+      "label": "Học viên",
+      "profileSource": "Choose an existing student profile from the API; no login is required in demo mode.",
+      "tabs": [
+        { "id": "home", "label": "Tổng quan", "icon": "Home" },
+        { "id": "classes", "label": "Lớp học", "icon": "CalendarDays" },
+        { "id": "courses", "label": "Khóa học", "icon": "BookOpen" },
+        { "id": "history", "label": "Lịch sử", "icon": "History" },
+        { "id": "profile", "label": "Cá nhân", "icon": "UserRound" }
+      ],
+      "screens": [
+        {
+          "id": "student-home",
+          "title": "Tổng quan học viên",
+          "content": ["welcome card with selected student name", "course, class, and invoice counts", "student's enrolled classes", "featured courses"],
+          "actions": ["open class list", "browse courses", "switch profile"]
+        },
+        {
+          "id": "student-classes",
+          "title": "Lớp học",
+          "content": ["classes the selected student attends", "available classes", "course name", "teacher", "room", "class capacity", "weekly schedule"],
+          "actions": ["inspect class details"]
+        },
+        {
+          "id": "student-courses",
+          "title": "Khóa học",
+          "content": ["course catalog", "course category and level", "tuition", "success message after an enrollment request"],
+          "actions": ["open course detail dialog", "start course enrollment"]
+        },
+        {
+          "id": "student-course-detail-and-checkout",
+          "title": "Chi tiết và đăng ký khóa học",
+          "presentation": "Focused modal, sheet, or dedicated screen with a close action.",
+          "content": ["course category, level, name, tuition, and description", "selected student", "available classes with schedule, teacher, room, and remaining seats", "payment method choices", "message explaining staff confirmation is required"],
+          "paymentMethods": ["Chuyển khoản", "Thẻ ngân hàng", "Ví điện tử"],
+          "actions": ["select a class", "select the reported payment method", "send enrollment/payment request", "close and return to course list"],
+          "workflow": "Submitting creates a pending request. It does not enroll the student or create an invoice until operations staff confirms it in the Admin transaction screen."
+        },
+        {
+          "id": "student-history",
+          "title": "Lịch sử",
+          "content": ["learning history by course and class", "assessment results when available", "invoice and payment history", "invoice status and date"],
+          "emptyState": "Explain when there are no learning records or invoices yet."
+        },
+        {
+          "id": "student-profile",
+          "title": "Cá nhân",
+          "content": ["list of available student demo profiles", "selected profile state", "short note that login is disabled for demo"],
+          "actions": ["select a different student profile"]
+        }
+      ]
+    },
+    {
+      "id": "teacher",
+      "label": "Giáo viên",
+      "profileSource": "Choose an existing teacher profile from the API; no login is required in demo mode.",
+      "tabs": [
+        { "id": "home", "label": "Lịch dạy", "icon": "CalendarDays" },
+        { "id": "classes", "label": "Lớp học", "icon": "School" },
+        { "id": "students", "label": "Học viên", "icon": "Users" },
+        { "id": "requests", "label": "Yêu cầu", "icon": "ClipboardList" },
+        { "id": "history", "label": "Điểm số", "icon": "ChartNoAxesColumn" }
+      ],
+      "screens": [
+        {
+          "id": "teacher-schedule",
+          "title": "Lịch dạy",
+          "content": ["selected teacher summary", "assigned classes", "course, room, schedule, class size, and status"],
+          "actions": ["select a class", "open class roster"]
+        },
+        {
+          "id": "teacher-classes",
+          "title": "Lớp được phân công",
+          "content": ["assigned class cards", "schedule", "room", "student capacity", "class status"]
+        },
+        {
+          "id": "teacher-attendance",
+          "title": "Danh sách & điểm danh",
+          "content": ["class selector", "class date", "student roster", "attendance status per student"],
+          "attendanceStatuses": ["Có mặt", "Vắng", "Đi muộn", "Có phép"],
+          "actions": ["select class and date", "mark attendance", "save attendance"]
+        },
+        {
+          "id": "teacher-requests",
+          "title": "Yêu cầu mở lớp / đổi lịch",
+          "content": ["request type", "course assignment", "class code or existing class", "room selector", "weekday and time", "reason", "submitted request list and review status"],
+          "actions": ["request opening a class for an assigned course", "request a room or schedule change for an assigned class", "view operations staff response"],
+          "workflow": "Requests are sent to Admin > Quản lý Lớp học > Yêu cầu giáo viên for staff review."
+        },
+        {
+          "id": "teacher-grades",
+          "title": "Kết quả học tập",
+          "content": ["class selector", "student results", "assessment name", "score", "maximum score"],
+          "actions": ["select student", "enter assessment and score", "save result"]
+        },
+        {
+          "id": "teacher-profile-switcher",
+          "title": "Chọn hồ sơ giáo viên",
+          "presentation": "Teacher profile summary and selectable profile chips at the top of the workspace.",
+          "actions": ["switch teacher demo profile"]
+        }
+      ]
+    }
+  ],
+  "sharedComponents": [
+    "mode switch control",
+    "bottom navigation bar with active tab",
+    "profile selector chips",
+    "course and class cards",
+    "status badge",
+    "primary action button",
+    "selectable option chips",
+    "form fields optimized for touch",
+    "loading indicator",
+    "empty-state message",
+    "success and error feedback",
+    "modal or bottom sheet with close action",
+    "API connection retry panel"
+  ],
+  "redesignDeliverablesRequestedFromAI": [
+    "Propose a mobile-first visual direction and design tokens.",
+    "Show key screens for both Student and Teacher modes.",
+    "Redesign the course detail and pending enrollment/payment request flow.",
+    "Show loading, empty, error, success, and waiting-for-staff-confirmation states.",
+    "Keep Vietnamese copy and preserve the listed workflows.",
+    "Return React Native / Expo-compatible screen and component guidance."
+  ]
+}

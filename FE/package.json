@@ -1,0 +1,10 @@
+{
+  "name": "ecms-frontend-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix Admin run dev",
+    "build": "npm --prefix Admin run build",
+    "preview": "npm --prefix Admin run preview",
+    "mobile": "npm --prefix Mobile start"
+  }
+}

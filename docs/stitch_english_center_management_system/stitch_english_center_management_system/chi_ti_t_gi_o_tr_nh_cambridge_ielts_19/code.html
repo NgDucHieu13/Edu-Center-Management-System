@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100%;}body{overscroll-behavior:none;background-color:#faf8ff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-container":"#3fd298","on-surface":"#131b2e","primary-fixed-dim":"#b8c4ff","on-tertiary-fixed":"#002113","on-tertiary-fixed-variant":"#005236","tertiary":"#003d27","on-primary":"#ffffff","primary-container":"#1e40af","primary":"#00288e","on-secondary":"#ffffff","secondary":"#0051d5","surface-variant":"#dae2fd","on-secondary-fixed-variant":"#003ea8","secondary-fixed-dim":"#b4c5ff","surface-bright":"#faf8ff","background":"#faf8ff","on-primary-container":"#a8b8ff","tertiary-fixed":"#6ffbbe","inverse-surface":"#283044","on-primary-fixed-variant":"#173bab","secondary-container":"#316bf3","outline-variant":"#c4c5d5","on-primary-fixed":"#001453","surface-container-low":"#f2f3ff","inverse-on-surface":"#eef0ff","surface-tint":"#3755c3","on-secondary-container":"#fefcff","surface":"#faf8ff","surface-container-high":"#e2e7ff","tertiary-fixed-dim":"#4edea3","error-container":"#ffdad6","error":"#ba1a1a","on-surface-variant":"#444653","on-error-container":"#93000a","surface-container":"#eaedff","surface-dim":"#d2d9f4","primary-fixed":"#dde1ff","inverse-primary":"#b8c4ff","secondary-fixed":"#dbe1ff","surface-container-lowest":"#ffffff","tertiary-container":"#00563a","surface-container-highest":"#dae2fd","on-secondary-fixed":"#00174b","outline":"#757684","on-error":"#ffffff","on-background":"#131b2e","on-tertiary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","space-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","margin":"2rem","space-xl":"2rem","margin-mobile":"1rem","gutter-mobile":"0.75rem","space-xs":"0.25rem"},"fontFamily":{"caption":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"display":["Plus Jakarta Sans"],"body-sm":["Inter"]},"fontSize":{"caption":["12px",{"lineHeight":"16px","letterSpacing":"0","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0","fontWeight":"400"}]}}}}</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Quay lại" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate max-w-[180px]">Chi Tiet Giao Trinh</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Chia sẻ" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">share</span></button><a aria-label="Giỏ hàng" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[24px]">shopping_cart</span><span class="absolute top-1.5 right-1.5 min-w-[18px] h-[18px] px-1 bg-error text-on-error font-label-sm text-label-sm rounded-full flex items-center justify-center leading-none">2</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full pb-28">
+<!-- Dynamic Media Gallery / Showcase Section -->
+<section class="relative w-full bg-gradient-to-b from-surface-container-high/40 via-surface to-surface px-margin-mobile pt-space-md">
+<!-- Top Pill Badges -->
+<div class="flex flex-wrap items-center gap-space-xs mb-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+        Chính hãng NXB Cambridge
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm shadow-sm">
+        -15% Học viên ECMS
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">school</span>
+        Bắt buộc IELTS-M02
+      </span>
+</div>
+<!-- Book Hero Canvas & Showcase Presentation -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-lowest shadow-md flex items-center justify-center p-space-md">
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-high/50 to-transparent"></div>
+<!-- Primary Display Image -->
+<div class="relative z-10 w-44 aspect-[3/4.2] rounded-lg overflow-hidden shadow-xl transform -rotate-1 transition-transform duration-300 hover:rotate-0">
+<img class="w-full h-full object-cover" data-alt="Front view photograph of the Cambridge IELTS 19 Academic textbook book cover, featuring clean dark blue and crisp white typography with vibrant geometric academic graphics, resting on a clean minimalist slate desk with subtle ambient studio lighting and soft drop shadows" id="product-main-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBztYpXN8X6jNTo4FFxXbtRwzT8mdn49OjipIAvtZDldXxUKNCy36YuDJyGMkg-tBvqhtQEu_me54cTS-DmA4mAGn47y4KLvKjPLhHNnvWAq5joB9TLr3SbS97ZEpdbc0DgacGn28IJly7tAXI-o5CabTXPkc_eVozLpzvLyOVshEMUtR0nUGDAZbSoZ17xYxaBsCmBtV_3cZoxOSluW6-ddewlY5CgD0WWQuaKv9vu5pxT4Rwz8SHv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Quick Zoom Floating Indicator -->
+<button aria-label="Phóng to ảnh" class="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-surface/90 text-on-surface shadow-sm backdrop-blur flex items-center justify-center active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<!-- Edition Stamp -->
+<div class="absolute top-3 left-3 bg-surface-container-lowest/95 backdrop-blur px-2 py-1 rounded-md shadow-sm flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Tái bản 2024</span>
+</div>
+</div>
+<!-- Media Tab Switcher Pills -->
+<div class="flex items-center justify-center gap-2 mt-space-md">
+<button class="media-tab-btn active px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm flex items-center gap-1.5 transition-all" onclick="switchMediaTab(this, 'cover')" type="button">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+        Ảnh bìa
+      </button>
+<button class="media-tab-btn px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-surface-container-highest transition-all" onclick="switchMediaTab(this, 'preview')" type="button">
+<span class="material-symbols-outlined text-[16px]">find_in_page</span>
+        Mục lục &amp; Đọc thử
+      </button>
+<button class="media-tab-btn px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-surface-container-highest transition-all" onclick="switchMediaTab(this, 'audio')" type="button">
+<span class="material-symbols-outlined text-[16px]">headphones</span>
+        Audio đi kèm
+      </button>
+</div>
+</section>
+<!-- Title, Price & Academic Reputation -->
+<section class="px-margin-mobile pt-space-lg">
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md mb-1">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+        Cambridge English &amp; Ban Chuyên môn ECMS
+      </span>
+<span class="font-caption text-caption text-outline">Mã: CAM19-ACAD</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight tracking-tight">
+      Bộ giáo trình Cambridge IELTS 19 Academic + Lời giải chi tiết Task 2
+    </h2>
+<!-- Social Proof Rating & Circulation Counter -->
+<div class="flex items-center gap-3 mt-2.5">
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">4.9</span>
+<span class="font-caption text-caption text-on-surface-variant">(128 học viên)</span>
+</div>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_shipping</span>
+        Đã cấp 450+ cuốn
+      </span>
+</div>
+<!-- Pricing Matrix & Loyalty Perk Card -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-baseline gap-2.5">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">297.500 đ</span>
+<span class="font-body-md text-body-md text-outline line-through">350.000 đ</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-error-container text-on-error-container font-semibold">
+          Tiết kiệm 52.500 đ (-15%)
+        </span>
+</div>
+<!-- Center Points Perk Indicator -->
+<div class="mt-space-sm pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-tertiary-fixed-variant">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[15px]">token</span>
+</div>
+<span class="font-label-md text-label-md font-medium">Tích lũy <strong>+30 ECMS Points</strong> khi nhận sách</span>
+</div>
+<button aria-label="Xem quyền lợi điểm" class="text-secondary font-label-sm text-label-sm hover:underline" type="button">
+          Chi tiết
+        </button>
+</div>
+</div>
+</section>
+<!-- Personalized Academic Curriculum Compatibility -->
+<section class="px-margin-mobile mt-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-container p-space-md text-on-primary shadow-md">
+<!-- Decorative Backdrop Geometry -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-white/5 pointer-events-none blur-xl"></div>
+<div class="absolute right-3 top-3">
+<span class="px-2 py-0.5 rounded-full bg-on-primary/20 backdrop-blur font-label-sm text-label-sm font-semibold tracking-wide">
+          100% Khớp Lớp Học
+        </span>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-on-primary/10 flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">fact_check</span>
+</div>
+<div class="pr-12">
+<h3 class="font-headline-sm text-headline-sm text-on-primary">
+            Lớp IELTS Master (IELTS-M02)
+          </h3>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-0.5">
+            Giảng viên: ThS. Robert Anderson &amp; Trợ giảng Quỳnh Chi
+          </p>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-on-primary/10 backdrop-blur flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">event_upcoming</span>
+<p class="font-caption text-caption text-on-primary leading-relaxed">
+<span class="font-bold text-tertiary-fixed">Lưu ý giáo vụ:</span> Sách bắt đầu sử dụng từ <strong>Buổi 18 (Thứ Ba tuần tới)</strong> cho chuyên đề Phân tích đề Writing Task 2.
+        </p>
+</div>
+</div>
+</section>
+<!-- Included Academic Digital Perks -->
+<section class="px-margin-mobile mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+        Quà tặng &amp; Tiện ích kèm theo
+      </h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Trị giá 420.000 đ</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Perk Item 1 -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container-low transition-colors">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">headphones</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Audio MP3 Listening Bản Quyền</h4>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">Mới</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant line-clamp-1 mt-0.5">Mã code kích hoạt nghe trực tiếp trên App ECMS không giới hạn</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</div>
+<!-- Perk Item 2 -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container-low transition-colors">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">computer</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">4 Full Mock Tests trên LMS</h4>
+<p class="font-caption text-caption text-on-surface-variant line-clamp-1 mt-0.5">Mô phỏng thi máy tính thực tế, hệ thống AI chấm Writing &amp; Speaking tức thì</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</div>
+<!-- Perk Item 3 -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container-low transition-colors">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Ebook Song Ngữ Từ Vựng Band 8.0+</h4>
+<p class="font-caption text-caption text-on-surface-variant line-clamp-1 mt-0.5">Sổ tay tổng hợp collocations học thuật trích xuất từ 4 bài Test</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Interactive Sample Preview / Read Chapter Module -->
+<section class="px-margin-mobile mt-space-lg">
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider">Trải nghiệm mẫu</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Đọc thử Bản Quyền (24 trang)</h3>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</div>
+</div>
+<!-- Preview Snapshot Preview Card -->
+<div class="relative w-full h-36 rounded-lg overflow-hidden bg-surface-container-high my-space-sm">
+<img class="w-full h-full object-cover" data-alt="Crisp close-up photograph of an open academic page from the Cambridge IELTS textbook, displaying well-structured English essay writing analysis with color-coded highlighting, margin annotations, and band descriptor notes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyE5ufzOd-Q3y3pPew103hTqChGbHR2wbDHpuLPIouhHXoPYbEigoSrOZwxo0BN4OeBwlGmuxHGlreTjOB4973Dyyw1cIdUA4r_GBWMYmYiWcNRedypwW9jG6E_mKUNyyUp-0DoVqrZSb6KrbEeM0hfqnmsOFLjDCNc9EjyZnF5ZOgBcoJ_0cR-bCoOyR7QJuksWDOyAoRLthW2j0arOqIwgTlMHDlFd35fKvPxlaVoY0m4vgWIRPp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-space-md text-white">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-bold uppercase tracking-wider">Chương 1: Test 1 Writing Task 2</span>
+<p class="font-body-sm text-body-sm text-white/90 font-medium">Bản thảo bài luận mẫu Band 8.5 &amp; Nhận xét giám khảo Cambridge</p>
+</div>
+</div>
+<!-- Action Trigger Buttons -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-sm">
+<button class="h-10 px-3 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" onclick="openPreviewModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+          Đọc thử (PDF)
+        </button>
+<button class="h-10 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 hover:bg-surface-container-highest active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">list_alt</span>
+          Mục lục sách
+        </button>
+</div>
+</div>
+</section>
+<!-- Technical Specs & Campus Delivery Logistics -->
+<section class="px-margin-mobile mt-space-lg">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">
+      Thông số kỹ thuật &amp; Nhận sách
+    </h3>
+<!-- Specifications Table Grid -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="grid grid-cols-2 gap-y-3 gap-x-space-md">
+<div>
+<span class="font-caption text-caption text-outline">Kích thước khổ</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">19 x 26.5 cm (Chuẩn UK)</p>
+</div>
+<div>
+<span class="font-caption text-caption text-outline">Số trang</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">248 trang + Phụ lục giải</p>
+</div>
+<div>
+<span class="font-caption text-caption text-outline">Năm xuất bản</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">2024 (Cambridge University)</p>
+</div>
+<div>
+<span class="font-caption text-caption text-outline">Ngôn ngữ phân tích</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">Song ngữ Anh - Việt</p>
+</div>
+</div>
+<!-- Campus Pickup Delivery Route -->
+<div class="mt-space-md pt-space-md bg-surface-container-low -mx-space-md -mb-space-md p-space-md rounded-b-xl space-y-2.5">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">storefront</span>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Nhận trực tiếp tại Cơ sở 1</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-tertiary text-on-tertiary">Sẵn có</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">
+              Quầy Lễ tân Tầng 1 - 215 Điện Biên Phủ, P.15, Q. Bình Thạnh (Nhận ngay trong ngày).
+            </p>
+</div>
+</div>
+<div class="flex items-start gap-2.5 pt-1">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">local_shipping</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface">Giao hỏa tốc 2H tận nơi</span>
+<p class="font-caption text-caption text-on-surface-variant">
+              Freeship cho thành viên đăng ký khóa Master. Bảo hành 1-đổi-1 trong 7 ngày nếu lỗi in ấn.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Student Reviews & Peer Feedback -->
+<section class="px-margin-mobile mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Đánh giá từ học viên</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-bold">128</span>
+</div>
+<button class="text-secondary font-label-sm text-label-sm hover:underline font-medium" type="button">
+        Xem tất cả
+      </button>
+</div>
+<!-- Review Card Highlight -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-on-primary-fixed font-label-lg text-label-lg">
+            TT
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Trần Thu Trang</span>
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">
+                IELTS 7.0 (K16)
+              </span>
+</div>
+<span class="font-caption text-caption text-outline">Đã mua qua Lớp IELTS-M02</span>
+</div>
+</div>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        “Sách in sắc nét, bìa cứng cáp. Điểm mình ưng nhất là phần giải đề Writing Task 2 được thầy Anderson và trung tâm bổ sung phân tích theo 4 tiêu chí chấm rất rõ. Đọc xong áp dụng làm dàn bài tăng band tốc độ thấy rõ!”
+      </p>
+<div class="flex items-center gap-2 text-outline font-caption text-caption">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span>
+<span>24 học viên thấy hữu ích</span>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Purchase Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md shadow-[0_-4px_16px_rgba(0,0,0,0.06)] pb-safe">
+<div class="max-w-md mx-auto px-margin-mobile py-2.5 flex items-center gap-2.5">
+<!-- Quick Action Utilities -->
+<div class="flex items-center gap-1">
+<!-- Support Academic Desk -->
+<button aria-label="Tư vấn Giáo vụ" class="w-10 h-10 rounded-lg flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+<span class="font-label-sm text-[10px] leading-tight">Giáo vụ</span>
+</button>
+<!-- Bookmark / Wishlist -->
+<button aria-label="Lưu vào danh sách yêu thích" class="w-10 h-10 rounded-lg flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" id="bookmark-btn" onclick="toggleBookmark(this)" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform active:scale-125">bookmark_border</span>
+<span class="font-label-sm text-[10px] leading-tight">Lưu</span>
+</button>
+</div>
+<!-- Action Buttons Grid -->
+<div class="flex items-center gap-2 flex-1">
+<!-- Add To Cart -->
+<button class="flex-1 h-11 px-2.5 rounded-lg bg-surface-container-high text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 hover:bg-surface-container-highest active:scale-95 transition-all" onclick="addToCartAnimation(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="truncate">Thêm vào giỏ</span>
+</button>
+<!-- Buy Now Flow -->
+<button class="flex-1 h-11 px-3 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-1 shadow-md hover:bg-secondary active:scale-95 transition-all" onclick="proceedCheckout()" type="button">
+<span>Mua ngay</span>
+<span class="font-bold">297K</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Feedback Element -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-opacity duration-300" id="toast-feedback">
+<div class="px-4 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+<span id="toast-text">Đã thêm vào giỏ hàng học viên</span>
+</div>
+</div>
+</div>
+<script>
+  function switchMediaTab(btn, mode) {
+    document.querySelectorAll('.media-tab-btn').forEach(b => {
+      b.classList.remove('active', 'bg-primary', 'text-on-primary');
+      b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+    });
+    btn.classList.add('active', 'bg-primary', 'text-on-primary');
+    btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+
+    const toast = document.getElementById('toast-feedback');
+    const toastText = document.getElementById('toast-text');
+    if (mode === 'audio') {
+      toastText.textContent = "Audio sample: Track 01 Listening Practice";
+      showToast();
+    } else if (mode === 'preview') {
+      toastText.textContent = "Đang tải mục lục và bản đọc thử...";
+      showToast();
+    }
+  }
+
+  function toggleBookmark(btn) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    const isSaved = icon.textContent === 'bookmark';
+    if (isSaved) {
+      icon.textContent = 'bookmark_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      showCustomToast("Đã bỏ lưu khỏi danh mục yêu thích");
+    } else {
+      icon.textContent = 'bookmark';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      showCustomToast("Đã lưu sách vào hồ sơ học viên");
+    }
+  }
+
+  function addToCartAnimation(btn) {
+    btn.classList.add('scale-95');
+    setTimeout(() => btn.classList.remove('scale-95'), 150);
+    showCustomToast("Đã thêm sách vào Giỏ hàng ECMS!");
+  }
+
+  function openPreviewModal() {
+    showCustomToast("Đang mở PDF Preview Chương 1 (24 trang)...");
+  }
+
+  function proceedCheckout() {
+    showCustomToast("Chuyển tiếp đến cổng thanh toán học phí & giáo trình...");
+  }
+
+  function showCustomToast(text) {
+    const toast = document.getElementById('toast-feedback');
+    const toastText = document.getElementById('toast-text');
+    toastText.textContent = text;
+    showToast();
+  }
+
+  function showToast() {
+    const toast = document.getElementById('toast-feedback');
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2200);
+  }
+</script></main></body></html>

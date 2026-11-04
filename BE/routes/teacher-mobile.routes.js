@@ -1,0 +1,16 @@
+const express=require('express');
+const c=require('../controllers/teacher-mobile.controller');
+const router=express.Router();
+router.get('/teachers',c.listTeachers);
+router.get('/teachers/:teacherId/profile',c.profile);
+router.get('/teachers/:teacherId/classes',c.classes);
+router.get('/teachers/:teacherId/classes/:classId/students',c.students);
+router.post('/teachers/:teacherId/classes/:classId/attendance',c.attendance);
+router.post('/teachers/:teacherId/classes/:classId/grades',c.grade);
+router.get('/teachers/:teacherId/assigned-courses',c.assignedCourses);
+router.get('/class-requests',c.requests);
+router.get('/teachers/:teacherId/class-requests',c.requests);
+router.post('/teachers/:teacherId/class-requests',c.createRequest);
+router.post('/class-requests/:requestId/approve',c.approve);
+router.post('/class-requests/:requestId/reject',c.reject);
+module.exports=router;
